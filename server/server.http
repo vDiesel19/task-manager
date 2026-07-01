@@ -1,0 +1,47 @@
+@server_HostAddress = http://localhost:5062
+
+### Users
+
+GET {{server_HostAddress}}/users
+Accept: application/json
+
+###
+
+POST {{server_HostAddress}}/users
+Content-Type: application/json
+
+{
+  "name": "Jane Doe",
+  "email": "jane@example.com"
+}
+
+###
+
+GET {{server_HostAddress}}/users/1
+Accept: application/json
+
+###
+
+### Tasks
+
+GET {{server_HostAddress}}/tasks
+Accept: application/json
+
+###
+
+POST {{server_HostAddress}}/tasks
+Content-Type: application/json
+
+{
+  "title": "Buy groceries",
+  "description": "Milk, eggs, bread",
+  "userId": 1,
+  "status": "not_started"
+}
+
+###
+
+GET {{server_HostAddress}}/tasks/1
+Accept: application/json
+
+###
