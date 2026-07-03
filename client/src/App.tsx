@@ -3,6 +3,7 @@ import { toast } from "sonner";
 import EmptyTasksState from "./components/empty-tasks-state";
 import Login from "./components/login";
 import DashboardHeader from "./components/dashboard-header";
+import DashboardLoading from "./components/dashboard-loading";
 import TaskBoard from "./components/task-board";
 import TaskDialog, {
   taskToFormValues,
@@ -108,7 +109,7 @@ export default function App() {
   };
 
   if (isValidating) {
-    return null;
+    return <DashboardLoading />;
   }
 
   if (!isLoggedIn || !userId) {
