@@ -11,8 +11,7 @@ POST {{server_HostAddress}}/users
 Content-Type: application/json
 
 {
-  "name": "Jane Doe",
-  "email": "jane@example.com"
+  "name": "Jane Doe"
 }
 
 ###
@@ -24,7 +23,7 @@ Accept: application/json
 
 ### Tasks
 
-GET {{server_HostAddress}}/tasks
+GET {{server_HostAddress}}/tasks?userId=1
 Accept: application/json
 
 ###
@@ -38,10 +37,5 @@ Content-Type: application/json
   "userId": 1,
   "status": "not_started"
 }
-
-###
-
-GET {{server_HostAddress}}/tasks/1
-Accept: application/json
 
 ###

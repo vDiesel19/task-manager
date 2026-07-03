@@ -1,8 +1,7 @@
 namespace Server.Models;
 
-public enum TaskItemStatus
-{
-    NotStarted,
-    InProgress,
-    Complete,
+public enum TaskItemStatus {
+  NotStarted,
+  InProgress,
+  Complete,
 }
